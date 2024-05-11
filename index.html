@@ -1,9 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript Project Ideas</title>
   <style>
     body {
@@ -40,13 +39,12 @@
     }
   </style>
 </head>
-
 <body>
 
   <div class="container">
     <h1 style="color: black;">JavaScript Project Ideas</h1>
     <hr />
-    <ul>
+    <ul id="project-list">
       <li><a href="./cmp/Todo_List/index.html">To-do-list</a></li>
       <li><a href="./cmp/Speech_Detection/index.html">Speech Detection</a></li>
       <li><a href="./cmp/Password_Generator/index.html">Password Generator</a></li>
@@ -60,11 +58,20 @@
       <li><a href="./cmp/Code_Snippet/index.html">Code Snippet Manager</a></li>
       <li><a href="./cmp/Text_Editor/index.html">Simple Text Editor</a></li>
       <li><a href="./cmp/Digital_Signature/index.html">Digital Signature</a></li>
-
-
     </ul>
   </div>
-  <!-- <script type="module" src="/main.js"></script> -->
-</body>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var projectLinks = document.querySelectorAll('#project-list a');
+      projectLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          var url = this.getAttribute('href');
+          window.location.href = url;
+        });
+      });
+    });
+  </script>
+</body>
 </html>
