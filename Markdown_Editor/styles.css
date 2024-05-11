@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+}
+
+textarea {
+  width: 50%;
+  height: 80vh;
+  border: 1px solid #ccc;
+  padding: 10px;
+  resize: none;
+}
+
+#preview {
+  width: 50%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 10px;
+}
